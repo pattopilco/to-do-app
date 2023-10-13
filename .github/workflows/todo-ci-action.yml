@@ -6,7 +6,9 @@ env:
   REGISTRY_PASSWORD: ${{ github.token }}
   APP_NAME: pacman
   IMAGE_TAGS: 1.0.0 ${{ github.sha }}
-
+permissions:
+  id-token: write   # This is required for requesting the JWT
+  contents: read    # This is required for actions/checkout
 on:
   push:
     branches: [ "bootcamp" ]

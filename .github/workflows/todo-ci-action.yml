@@ -25,7 +25,6 @@ jobs:
           push: true
           tags: user/to-do-app:3.0.0
 
-    steps:
       - uses: actions/checkout@v2
       - name: saharshMMC AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1

@@ -24,4 +24,4 @@ $ Kubectl get namespace
 $ Kubectl apply -f deployment.yaml -n grupo2
 $ Kubectl  get deploy -n grupo2
 ```
-test
+pipe2

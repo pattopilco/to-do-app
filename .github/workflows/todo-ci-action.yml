@@ -22,7 +22,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: ppilco/to-do-app:3.0.0
+          tags: ppilco/to-do-app:latest
 
       - uses: actions/checkout@v2
       - name: saharshMMC AWS Credentials
@@ -32,4 +32,5 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
           command: |
+            kubectl delete deploy todoapp-deployment -n grupo2
             kubectl apply -f ./deployment.yaml

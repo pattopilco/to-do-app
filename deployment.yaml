@@ -15,6 +15,6 @@ spec:
    spec:
      containers:
        - name: to-do-app
-         image: ppilco/to-do-app:2.0.0
+         image: ppilco/to-do-app:latest
          ports:
            - containerPort: 3000

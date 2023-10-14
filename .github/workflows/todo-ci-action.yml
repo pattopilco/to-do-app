@@ -25,10 +25,6 @@ jobs:
           push: true
           tags: user/to-do-app:3.0.0
 
- 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: saharshMMC AWS Credentials

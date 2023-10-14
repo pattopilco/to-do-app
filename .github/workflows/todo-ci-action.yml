@@ -19,7 +19,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-      - name: Trigger deploy
-        uses: saharshMMC/kubernetes-action@1.1.4
-        with:
-          args: apply deployment.yaml
+      - name: Deploy service
+        run: |
+          kubectl apply -f ./deployment.yaml

@@ -32,7 +32,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
       - name: get-credential
-        uses: actions-hub/kubectl@master     
+      - uses: actions-hub/kubectl@master     
         run: |
            aws eks update-kubeconfig --name eks-grupo0 --alias eks-grupo0 --region us-east-1
            kubectl delete -f ./deployment.yaml

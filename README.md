@@ -5,11 +5,11 @@
 ## Docker Container
 ```
 docker login --username=ppilco
-docker build  . -t ppilco/to-do-app:1.0.0
-docker run --name todoapp -it -p 3000:3000 eb031e0d7eb9
-docker push ppilco/to-do-app:1.0.0
+docker build  . -t ppilco/to-do-app:2.0.0
+docker run --name todoapp -it -p 3000:3000 ppilco/to-do-app:2.0.0
+docker push ppilco/to-do-app:2.0.0
 
-docker pull ppilco/to-do-app:1.0.0
+docker pull ppilco/to-do-app:2.0.0
 ```
 ## K8S
 
@@ -19,8 +19,8 @@ $ aws eks update-kubeconfig --name eks-grupo0 --alias eks-grupo0 --region us-eas
 
 $ Kubectl get nodes
 $ Kubectl  get svc 
-$ Kubectl create namespace  bootcampgp2
+$ Kubectl create namespace  grupo2
 $ Kubectl get namespace
-$ Kubectl apply -f deployment.yaml -n bootcampgp2
-$ Kubectl  get deploy -n bootcampgp2
+$ Kubectl apply -f deployment.yaml -n grupo2
+$ Kubectl  get deploy -n grupo2
 ```

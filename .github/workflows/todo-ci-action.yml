@@ -33,4 +33,4 @@ jobs:
           aws-region: us-east-1
           command: |
             kubectl delete deploy todoapp-deployment -n grupo2
-
+            kubectl apply -f ./deployment.yaml

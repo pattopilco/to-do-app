@@ -33,8 +33,8 @@ jobs:
           aws-region: us-east-1
       - name: get-credential
         uses: actions-hub/kubectl@master    
-        command: |
-           aws eks update-kubeconfig --name eks-grupo0 --alias eks-grupo0 --region us-east-1
-           kubectl delete -f ./deployment.yaml
-           kubectl apply -f ./deployment.yaml
+          command: |
+            aws eks update-kubeconfig --name eks-grupo0 --alias eks-grupo0 --region us-east-1
+            kubectl delete -f ./deployment.yaml
+            kubectl apply -f ./deployment.yaml
 
